@@ -1,0 +1,25 @@
+# configuration file for AircraftExperiment #
+# change the hyperameters for the model run here #
+
+# --- EXPERIMENT SETTINGS --- #
+experiment_id: 0
+random_seed: 12
+make_plots: True
+
+# 5-Fold cross validation
+k_folds: 5
+
+# --- DATASET SETTINGS --- #
+data_path: data/
+target: airplane
+select_classes: [airplane, freeway, buildings, runway, parkinglot, mediumresidential, storagetanks, intersection]
+balance_classes: False
+image_dims: [50 ,50]
+
+# --- FEATURE EXTRACTOR HYPERPARAMETERS --- #
+cuda: False
+n_clusters: 500
+n_octave_layers: 60
+contrast_threshold: 0.01
+
+
