@@ -2,6 +2,7 @@
 
 
 ![](media/rbf_kernel.png)
+
 These experiments test the performance of a Gaussian process (GP) classifier with various kernels on the UC Merced land use land cover (LULC) dataset. The motivation comes from the paper [Gaussian Processes for Object Detection in High Resolution Remote Sensing Images (Liang et al. 2016)](https://ieeexplore.ieee.org/document/7838284), where the authors use a combination of a SIFT or SURF feature extractor and a GP with squared exponential / radial basis function (RBF) kernel to classify aerial images as _airplane / not airplane_. 
 
 
@@ -36,7 +37,6 @@ from the root directory. This will set up the environment and experiments and wi
 To run multiple experiments with `pipenv` (also from the root directory):
 
 ```
-
 pipenv run sh run_batch.sh
 ```
 
