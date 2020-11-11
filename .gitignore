@@ -1,5 +1,6 @@
-.ipynb_checkpoints/**
+**/*.ipynb_checkpoints/
 .vscode/**
 mlruns/**
 figs/**
 !*.sh
+.DS_Store
