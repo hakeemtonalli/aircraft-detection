@@ -1,9 +1,9 @@
 .ipynb_checkpoints
-*/.ipynb_checkpoints/*
-.vscode/*
-mlruns/*
-notebooks/*
+*/.ipynb_checkpoints/**
+.vscode/**
+mlruns/**
+notebooks/**
 figs/*
 !*.sh
-*.ipynb
+**.ipynb
 **/.DS_Store
