@@ -6,4 +6,5 @@ notebooks/**
 figs/*
 !*.sh
 **.ipynb
+*.html
 **/.DS_Store
