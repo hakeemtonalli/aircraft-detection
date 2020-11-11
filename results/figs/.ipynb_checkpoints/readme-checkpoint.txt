@@ -1,1 +1,0 @@
-This `figs/` directory is to output figures at the end of an experiment. The figures can be deleted if running an experiment with MLflow that logs the figure, since MLflow logs them under `mlruns/artifacts.

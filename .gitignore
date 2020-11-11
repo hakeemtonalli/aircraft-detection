@@ -3,4 +3,5 @@
 mlruns/**
 figs/**
 !*.sh
+*.ipynb
 .DS_Store
