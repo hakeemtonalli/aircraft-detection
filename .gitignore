@@ -5,6 +5,7 @@ mlruns/**
 notebooks/**
 figs/*
 !*.sh
+!*.md
 **.ipynb
 *.html
 **/.DS_Store

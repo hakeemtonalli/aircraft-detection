@@ -1,19 +1,10 @@
 # Gaussian Processes for Aircraft Detection
 
-
-![](media/rbf_kernel.png)
+<img src="media/rbf_kernel.png" align="right" height="200" />
 
 These experiments test the performance of a Gaussian process (GP) classifier with various kernels on the UC Merced land use land cover (LULC) dataset. The motivation comes from the paper [Gaussian Processes for Object Detection in High Resolution Remote Sensing Images (Liang et al. 2016)](https://ieeexplore.ieee.org/document/7838284), where the authors use a combination of a SIFT or SURF feature extractor and a GP with squared exponential / radial basis function (RBF) kernel to classify aerial images as _airplane / not airplane_. 
 
-
-
-The __GP with RBF kernel__ performed best in the original paper but other kernels were not considered. These experiments attempt to reproduce the results from the paper, but also considers additional kernels for the GP to see if they increase/decrease performance. 
-
-Using __SIFT as a feature extractor__ also provided the best results in the original work. However, the embeddings from a pretrained convolutional neural network can be used in lieu of SIFT features. This approach is considered as well by replacing SIFT features with ResNet-18 features being fed into the GP. 
-
-
-
-### Run with virtual environment
+## Run with virtual environment
 The settings for the experiment are in `config.yaml`.
 
 #### Set up environment
@@ -48,7 +39,9 @@ pipenv run python run.py --kernel=Linear_Kernel
 
 The full list of kernels used is in the `KERNELS` dictionary in `run.py`.
 
-### Run with Docker
+---
+
+## Run with Docker
 
 First, ensure that Docker is able to use at least 6 GB of memory. The default 2 GB memory will cause the process to die. Using larger images will require more memory - ex. 150 x 150 images require at least 10 GB of memory and 224 x 224 images require at least 16 GB memory.
 
@@ -67,7 +60,9 @@ docker run -it -p 5000:5000 --name aircraft-detection aircraft-detection
 
 To run experiments, use the `pipenv run`commands from the previous section.
 
-### Viewing the results in MLflow
+---
+
+## Viewing the results in MLflow
 
 To view the results of each experiment, first enter the container if needed:
 
