@@ -1,6 +1,6 @@
 # Gaussian Processes for Aircraft Detection
 
-<img src="media/rbf_kernel.png" align="right" height="200" />
+<img src="media/rbf_kernel.png" align="right" height="300" />
 
 These experiments test the performance of a Gaussian process (GP) classifier with various kernels on the UC Merced land use land cover (LULC) dataset. The motivation comes from the paper [Gaussian Processes for Object Detection in High Resolution Remote Sensing Images (Liang et al. 2016)](https://ieeexplore.ieee.org/document/7838284), where the authors use a combination of a SIFT or SURF feature extractor and a GP with squared exponential / radial basis function (RBF) kernel to classify aerial images as _airplane / not airplane_. 
 
