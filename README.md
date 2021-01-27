@@ -11,7 +11,7 @@ The settings for the experiment are in `config.yaml`.
 `pipenv` is used for managing dependencies. Before running any experiments, ensure that `wget` is installed (using `brew install wget` with linux), all packages are installed, and MLflow is set up. Then pull the data from the UC Merced site. This can be done using:
 
 
-```
+```bash
 # install dependencies and create virtual env
 pipenv install 
 
@@ -27,13 +27,13 @@ from the root directory. This will set up the environment and experiments and wi
 #### Run experiments
 To run multiple experiments with `pipenv` (also from the root directory):
 
-```
+```bash
 pipenv run sh run_batch.sh
 ```
 
 To run a single experiment with a choice of kernel (ex. Linear kernel):
 
-```
+```bash
 pipenv run python run.py --kernel=Linear_Kernel
 ```
 
@@ -48,13 +48,13 @@ First, ensure that Docker is able to use at least 6 GB of memory. The default 2 
 Build the container:
 
 
-```
+```bash
 docker build -t aircraft-detection .
 ```
 
 Run the container with port mapped to 5000 for MLflow:
 
-```
+```bash
 docker run -it -p 5000:5000 --name aircraft-detection aircraft-detection
 ```
 
@@ -66,13 +66,13 @@ To run experiments, use the `pipenv run`commands from the previous section.
 
 To view the results of each experiment, first enter the container if needed:
 
-```
+```bash
 docker start -i aircraft-detection
 ```
 
 Then use (from the root directory containing `mlruns/`):
 
-```
+```bash
 pipenv run mlflow ui --host 0.0.0.0
 ```
 
